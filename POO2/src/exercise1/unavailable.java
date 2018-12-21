@@ -9,7 +9,7 @@ public class unavailable extends state {
 
 	@Override
 	public void describe() {
-		System.out.println("available stock");
+		System.out.println("unavailable stock");
 	}
 
 }

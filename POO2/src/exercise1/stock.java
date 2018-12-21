@@ -35,12 +35,13 @@ public class stock {
 	}
 	
 	private void updateStockState() {
-		if (getQuantity() > 10) 
+		if (getQuantity() > 10) {
 			new available(this);
-		else if (getQuantity() > 0)
+		} else  { if (getQuantity() >= 1) {
 			new critical(this);
-		else
+		} else {
 			new unavailable(this);
+		}}
 		state.describe();
 	}
 }

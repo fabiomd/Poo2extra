@@ -7,7 +7,7 @@ public class main {
 			store store = new store();
 				
 			store.sellCup(3);
-			store.sellBottles(10);
+			store.sellBottles(50);
 			store.sellPlates(2);
 			store.replaceBottles(50);
 			store.replaceCup(3);

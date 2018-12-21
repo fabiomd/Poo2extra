@@ -47,10 +47,8 @@ public class store {
 			System.out.println("Invalid quantity");
 			return;
 		}
-		if (stock.getQuantity() > quantity) {
-			for (int i=0; i<quantity; i++) {
-				stock.removeProduct();
-			}
+		for (int i=0; i<quantity; i++) {
+			stock.removeProduct();
 		}
 	}
 	
