@@ -1,3 +1,4 @@
+package exercise2;
 
 public class plateFactory extends factory2D {
 

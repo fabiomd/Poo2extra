@@ -1,3 +1,4 @@
+package exercise2;
 
 public class bottleFactory extends factory3D {
 

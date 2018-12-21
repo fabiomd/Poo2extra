@@ -1,3 +1,4 @@
+package exercise1;
 import java.util.ArrayList;
 
 public class store {
@@ -46,7 +47,6 @@ public class store {
 			System.out.println("Invalid quantity");
 			return;
 		}
-		checkStockState(stock);
 		if (stock.getQuantity() > quantity) {
 			for (int i=0; i<quantity; i++) {
 				stock.removeProduct();
@@ -54,42 +54,26 @@ public class store {
 		}
 	}
 	
-	private void checkStockState(stock stock) {
-		int quantityOnStock = stock.getQuantity();
-		if (quantityOnStock >= 10) {
-			System.out.println("available stock");
-		} else 
-		if (quantityOnStock > 1) {
-			System.out.println("critical stock");
-		} else 
-		if (quantityOnStock == 0) {
-			System.out.println("unavailable stock");
-		}
-	}
-	
 	private void fillCupStock() {
 		ArrayList<product> cups = new ArrayList<product>();
-		factory cupFactory = new cupFactory();
 		for(int i=0; i< 10;i++) {
-			cups.add(cupFactory.fabricate());
+			cups.add(new cup());
 		}
 		cupsStock = new stock(cups);
 	}
 	
 	private void fillBottleStock() {
 		ArrayList<product> bottles = new ArrayList<product>();
-		factory bottleFactory = new cupFactory();
 		for(int i=0; i< 10;i++) {
-			bottles.add(bottleFactory.fabricate());
+			bottles.add(new bottle());
 		}
 		bottlesStock = new stock(bottles);
 	}
 	
 	private void fillPlateStock() {
 		ArrayList<product> plates = new ArrayList<product>();
-		factory plateFactory = new cupFactory();
 		for(int i=0; i< 10;i++) {
-			plates.add(plateFactory.fabricate());
+			plates.add(new plate());
 		}
 		platesStock = new stock(plates);
 	}

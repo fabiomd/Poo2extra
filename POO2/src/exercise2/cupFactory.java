@@ -1,3 +1,4 @@
+package exercise2;
 
 public class cupFactory extends factory3D {
 

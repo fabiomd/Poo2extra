@@ -1,3 +1,4 @@
+package exercise2;
 
 public abstract class factory3D extends factory {
 	@Override
