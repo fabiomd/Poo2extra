@@ -3,10 +3,11 @@ import java.util.ArrayList;
 
 public class stock {
 	private ArrayList<product> products = new ArrayList<product>();
-	private state state = new unavailable();
+	private state state = null;
 
 	public stock(ArrayList<product> products) {
 		this.products = products;
+		new unavailable(this);
 	}
 	
 	public int getQuantity() {
@@ -29,13 +30,17 @@ public class stock {
 		updateStockState();
 	}
 	
+	public void setState(state state) {
+		this.state = state;
+	}
+	
 	private void updateStockState() {
 		if (getQuantity() > 10) 
-			state = new available();
+			new available(this);
 		else if (getQuantity() > 0)
-			state = new critical();
+			new critical(this);
 		else
-			state = new unavailable();
+			new unavailable(this);
 		state.describe();
 	}
 }
